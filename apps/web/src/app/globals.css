@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #070B1A;
+  --color-surface: #111827; /* Card */
+  --color-primary: #4F46E5;
+  --color-secondary: #7C3AED;
+  --color-on-surface: #FFFFFF; /* Text */
+  --color-muted: #94A3B8;
+  --color-border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Keeping old variables mapped to new ones or closest equivalent to avoid breaking existing pages too abruptly, but we will migrate them. */
+  --color-primary-container: #4F46E5;
+  --color-on-primary-container: #FFFFFF;
+  --color-tertiary: #7C3AED; /* Map tertiary to secondary as well for now, or pick a different one. The prompt only gives Primary and Secondary. */
+  --color-surface-variant: #111827;
+  --color-on-surface-variant: #94A3B8;
+  --color-outline: rgba(255, 255, 255, 0.08);
+  --color-surface-container-lowest: #070B1A;
+
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-headline: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border-glass);
+  }
+  
+  .glow-border-indigo {
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+    border: 1px solid rgba(79, 70, 229, 0.4);
+  }
+
+  .glow-border-secondary {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
+    border: 1px solid rgba(124, 58, 237, 0.4);
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(184, 195, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Global custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+}
+

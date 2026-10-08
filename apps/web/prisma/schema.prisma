@@ -1,0 +1,109 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("student") // "student" or "admin"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  studentProfile StudentProfile?
+  announcements  Announcement[]
+}
+
+model StudentProfile {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  phone          String?
+  category       String?
+  board          String?
+  percentage     Float?
+  district       String?
+  applicationStatus String @default("REGISTERED") // REGISTERED, VERIFIED, CHOICES_FILLED, ALLOTTED
+  
+  certificates   Certificate[]
+  choices        Choice[]
+}
+
+model Certificate {
+  id               String         @id @default(cuid())
+  studentProfileId String
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+  type             String         // 10TH, 12TH, COMMUNITY, NATIVITY
+  url              String
+  status           String         @default("PENDING") // PENDING, APPROVED, REJECTED
+  uploadedAt       DateTime       @default(now())
+}
+
+model College {
+  id         String   @id @default(cuid())
+  code       String   @unique
+  name       String
+  type       String   // Government, Private, Aided
+  district   String
+  fees       Float?
+  naacGrade  String?
+  nbaStatus  Boolean  @default(false)
+  nirfRank   Int?
+  
+  branches   Branch[]
+  cutoffs    Cutoff[]
+}
+
+model Branch {
+  id         String   @id @default(cuid())
+  code       String
+  name       String
+  collegeId  String
+  college    College  @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  
+  choices    Choice[]
+  cutoffs    Cutoff[]
+
+  @@unique([collegeId, code])
+}
+
+model Cutoff {
+  id        String  @id @default(cuid())
+  collegeId String
+  college   College @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  branchId  String
+  branch    Branch  @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  year      Int
+  category  String  // OC, BC, BCM, MBC, SC, SCA, ST
+  score     Float
+  
+  @@unique([collegeId, branchId, year, category])
+}
+
+model Choice {
+  id               String         @id @default(cuid())
+  studentProfileId String
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+  branchId         String
+  branch           Branch         @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  preferenceOrder  Int
+  
+  @@unique([studentProfileId, branchId])
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  title     String
+  excerpt   String
+  content   String
+  category  String   @default("Updates")
+  date      DateTime @default(now())
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+}

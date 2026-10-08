@@ -1,0 +1,57 @@
+{
+  "Dashboard": "டாஷ்போர்டு",
+  "AI Cutoff Predictor": "செயற்கை நுண்ணறிவு கட்-ஆஃப் கணிப்பான்",
+  "Smart Choice Filling": "ஸ்மார்ட் கல்லூரி தேர்வு",
+  "AI Assistant": "செயற்கை நுண்ணறிவு உதவியாளர்",
+  "Explore Colleges": "கல்லூரிகளை ஆராயுங்கள்",
+  "Rank List": "தரவரிசை பட்டியல்",
+  "Application": "விண்ணப்பம்",
+  "Fee Payment": "கட்டணம் செலுத்துதல்",
+  "Allotment": "இட ஒதுக்கீடு",
+  "Student": "மாணவர்",
+  "Navigation": "வழிசெலுத்தல்",
+  "Sign Out": "வெளியேறு",
+  "Loading student portal...": "மாணவர் போர்டல் ஏற்றப்படுகிறது...",
+  
+  "Welcome to TNEA Insight": "TNEA Insight-க்கு வரவேற்கிறோம்",
+  "Welcome back": "மீண்டும் வருக",
+  "Track your counselling progress, explore AI-predicted cutoffs, and manage your engineering admission journey.": "உங்கள் கலந்தாய்வு முன்னேற்றத்தைக் கண்காணிக்கவும், AI கட்-ஆஃப்களை ஆராயவும், உங்கள் பொறியியல் சேர்க்கை பயணத்தை நிர்வகிக்கவும்.",
+  "Active Phase": "தற்போதைய நிலை",
+  "Days Remaining": "நாட்கள் மீதமுள்ளன",
+  
+  "Application ID": "விண்ணப்ப எண்",
+  "Rank": "தரவரிசை",
+  "Category": "பிரிவு",
+  "Choice Count": "தேர்வுகளின் எண்ணிக்கை",
+  
+  "Notification": "அறிவிப்பு",
+  "Official announcement published": "அதிகாரப்பூர்வ அறிவிப்பு வெளியிடப்பட்டது",
+  "Registration": "பதிவு",
+  "Application submitted": "விண்ணப்பம் சமர்ப்பிக்கப்பட்டது",
+  "Verification": "சரிபார்ப்பு",
+  "Documents approved": "ஆவணங்கள் அங்கீகரிக்கப்பட்டன",
+  "Your rank": "உங்கள் தரவரிசை",
+  "Choice Filling": "கல்லூரி தேர்வு பதிவு",
+  "Select preferences": "முன்னுரிமைகளைத் தேர்ந்தெடுக்கவும்",
+  "Awaiting results": "முடிவுகளுக்காக காத்திருக்கிறது",
+  "Pay acceptance fee": "ஏற்பு கட்டணம் செலுத்தவும்",
+  "Reporting": "கல்லூரியில் சேருதல்",
+  "Complete admission": "சேர்க்கையை முடிக்கவும்",
+  
+  "Your Admission Journey": "உங்கள் சேர்க்கை பயணம்",
+  "View Details": "விவரங்களைக் காண்க",
+  "Action Required: Fill Choices": "கவனம்: கல்லூரிகளைத் தேர்ந்தெடுக்கவும்",
+  
+  "See probability scores for your dream colleges using historical data.": "கடந்த கால தரவுகளைப் பயன்படுத்தி உங்கள் கனவு கல்லூரிகளுக்கான வாய்ப்பை அறியவும்.",
+  "Try it now": "இப்போது முயற்சிக்கவும்",
+  "Manage Choices": "தேர்வுகளை நிர்வகிக்கவும்",
+  "Review and reorder your selected colleges before the deadline.": "கடைசி தேதிக்கு முன் உங்கள் தேர்ந்தெடுக்கப்பட்ட கல்லூரிகளை மதிப்பாய்வு செய்து வரிசைப்படுத்தவும்.",
+  
+  "Important Updates": "முக்கியமான அறிவிப்புகள்",
+  "Round 2 Choice Filling Started": "இரண்டாம் சுற்று கல்லூரி தேர்வு தொடங்கியது",
+  "2 hours ago": "2 மணிநேரத்திற்கு முன்",
+  "Seat Matrix Updated": "காலியிட விபரம் புதுப்பிக்கப்பட்டது",
+  "1 day ago": "1 நாளுக்கு முன்",
+
+  "Choice Filling - Round 2": "கல்லூரி தேர்வு பதிவு - 2ம் சுற்று"
+}
